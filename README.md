@@ -1,27 +1,54 @@
-# AngularProject6
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
 
-## Development server
+# Carcure Website
+The Carcure Website is a car dealership platform built with Angular for the frontend and PHP for the backend. It provides a user-friendly interface for browsing, user registration, and admin management of user details.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Features
 
-## Code scaffolding
+# Admin Module
+  - Login: Secure login for admins.
+  - User Management: View and manage user details.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# User Module
+  - Registration: Validated user registration.
+  - Login: User login for accessing personalized features.
+  - Browse: User-friendly interface for exploring the car website.
+    
+# Technology Stack
+  - Frontend: Angular, HTML, CSS, JavaScript
+  - Backend: PHP (for handling backend logic and API endpoints)
+  - Data Storage: MySQL or another database of your choice (configure as needed)
+  - Authentication: Basic authentication for secure session handling
 
-## Build
+# Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Prerequisites
+  Make sure you have the following installed:
+  - Node.js (v14 or higher)
+  - Angular CLI (v12 or higher)
+  - A local server (such as XAMPP or WAMP) to run PHP files
 
-## Running unit tests
+# Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository:
+   git clone https://github.com/rakshanetalkar/carcure-Website.git
 
-## Running end-to-end tests
+2. Navigate to the project folder:
+   cd Angular_Project6
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Install frontend dependencies:
+  npm install
 
-## Further help
+4. Set up the PHP backend:
+  - Copy the carcure folder to your server’s directory (e.g., htdocs for XAMPP).
+  - Configure the database in the config.php file (inside the carcure folder) as needed for         MySQL or your chosen database.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Running the Project
+
+1. Start the Angular frontend server:
+  ng serve
+Open the app in your browser at http://localhost:4200.
+
+2. Start the PHP backend server:
+  - Start your server (XAMPP/WAMP) and ensure PHP is running.
+  - Access backend APIs at http://localhost/carcure or the configured route.
