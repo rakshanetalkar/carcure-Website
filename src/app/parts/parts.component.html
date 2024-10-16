@@ -1,0 +1,17 @@
+<section class="parts" id="parts">
+    <div class="heading">
+        <h1>Parts Of Car</h1>
+    </div>
+    <div class="parts-container">
+        <div class="box" *ngFor="let box of cards">
+            <img src="{{box.imgUrl}}">
+            <h3>{{box.h3}}</h3>
+            <span>{{box.rs}}</span>
+            <i class="fa-solid fa-star"><sub>{{box.review}}</sub></i>
+            <button>{{box.btn}}</button>
+            <a href="#" class="details">{{box.detail}}</a>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>
+<app-login-footer></app-login-footer>

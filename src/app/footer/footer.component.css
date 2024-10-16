@@ -1,0 +1,43 @@
+.footer{
+    background: black;
+    color:white;
+    text-decoration: none;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+.footer-container .footer-box .h3{
+    color: white;
+    margin-bottom: 1rem;
+}
+.footer-container .footer-box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+}
+.footer-container .footer-box .social{
+    display: flex;
+    align-items: center;
+}
+.footer-container .footer-box .social a{
+    font-size: 24px;
+    color: white;
+    margin-right: 1rem;
+    transition: all ease 0.4s;
+}
+.footer-container .footer-box .social a:hover{
+    color: red;
+}
+.footer-container .footer-box a,
+.footer-container .footer-box p{
+    color: rgb(197, 195, 195);
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.footer-container .footer-box a:hover,
+.footer-container .footer-box p:hover{
+    color: white;
+}

@@ -1,0 +1,69 @@
+<h1>User Details</h1>
+<table>
+    <thead>
+        <tr>
+            <th>UserID</th>
+            <th>FullName</th>
+            <th>UserName</th>
+            <th>Password</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Mobile</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of userArr; let i=index">
+            <td>{{i+101}}</td>
+            <td>{{user.Fullname}}</td>
+            <td>{{user.Username}}</td>
+            <td>{{user.Password}}</td>
+            <td>{{user.Address}}</td>
+            <td>{{user.City}}</td>
+            <td>{{user.State}}</td>
+            <td>{{user.Mobile}}</td>
+            <td class="action">
+                <button (click)="onEdit(i)"><i class="fa-solid fa-user-pen"></i></button>
+                <button (click)="onDelete(user.Mobile)"><i class="fa-solid fa-trash"></i></button>
+              </td>
+        </tr>
+    </tbody>
+</table>
+
+<form [formGroup]="updateForm" *ngIf="display">
+    <div class="inputPanel">
+        <input type="text" placeholder="Fullname" formControlName="Fullname"> 
+        <input type="email" placeholder="Username" formControlName="Username"> 
+        <input type="text" placeholder="Password" formControlName="Password"> 
+        <input type="text" placeholder="Confirm Password" formControlName="ConPassword"> 
+        <textarea cols="30" rows="10" placeholder="Address" formControlName="Address"></textarea>
+        <div class="options">
+            <select formControlName="City">
+                <option>City</option>
+                <option *ngFor="let city of citys" value="{{city}}">{{city}}</option>
+            </select>
+            <select formControlName="State">
+                <option>State</option>
+                <option *ngFor="let state of states" value="{{state}}">{{state}}</option>
+            </select>
+        </div> 
+        <input type="number" placeholder="Mobile No." formControlName="Mobile"> 
+      </div>
+      <div class="buttons">
+        <button class="update" (click)="onUpdate()">Update</button>
+        <button>Cancel</button>
+      </div>
+</form>
+<div class="deleteContainer" *ngIf="isDelete">
+    <div class="box">
+      <div class="part1">
+        <i class="fa-solid fa-circle-question"></i>
+        <p>Are you sure you want to delete data?</p>
+      </div>
+      <div class="part2">
+        <button class="btnYes" (click)="deleteUser()">Yes</button>
+        <button class="btnNo" (click)="isDelete=false">No</button>
+      </div>
+    </div>
+  </div>

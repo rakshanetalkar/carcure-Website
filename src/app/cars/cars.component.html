@@ -1,0 +1,13 @@
+<section class="cars">
+    <div class="heading">
+        <h1>We Have All Types Of Cars</h1>
+    </div>
+    <div class="cars-Container">
+        <div class="box" *ngFor="let box of boxs">
+            <img src="{{box.imgUrl}}">
+            <h2>{{box.head}}</h2>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>
+<app-login-footer></app-login-footer>

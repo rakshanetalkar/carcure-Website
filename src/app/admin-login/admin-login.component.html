@@ -1,0 +1,13 @@
+<div class="loginPanel">
+  <div class="login">
+      <h2>LOGIN</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <div class="inputPanel">
+          <input type="email" placeholder="Username" formControlName="uname"> 
+          <input type="password" placeholder="Password" formControlName="pwd">  
+        </div>
+        <button>Login</button>
+        <p class="error">{{message}}</p>
+      </form>
+  </div>
+</div>

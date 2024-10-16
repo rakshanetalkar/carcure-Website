@@ -1,0 +1,37 @@
+<div class="loginPanel">
+    <div class="login">
+        <h2>Register</h2>
+        <form [formGroup]="registerForm" (ngSubmit)="onformRegister()" (reset)="onformReset()">
+          <div class="inputPanel">
+            <input type="text" placeholder="Fullname" [ngClass]="{'is-disable':isDisable}" formControlName="Fullname"> 
+            <input type="email" placeholder="Username" [ngClass]="{'is-disable':isDisable}" formControlName="Username"> 
+            <input type="password" placeholder="Password" [ngClass]="{'is-disable':isDisable}" formControlName="Password"> 
+            <input type="password" placeholder="Confirm Password" [ngClass]="{'is-disable':isDisable}"
+             formControlName="ConPassword"> 
+            <textarea cols="30" rows="10" placeholder="Address" [ngClass]="{'is-disable':isDisable}"
+             formControlName="Address"></textarea>
+            <div class="options">
+                <select [ngClass]="{'is-disable':isDisable}" formControlName="City">
+                    <option value="">City</option>
+                    <option *ngFor="let city of citys" value="{{city}}">{{city}}</option>
+                </select>
+                <select formControlName="State" [ngClass]="{'is-disable':isDisable}">
+                    <option value="">State</option>
+                    <option *ngFor="let state of states" value="{{state}}">{{state}}</option>
+                </select>
+            </div> 
+            <input type="number" placeholder="Mobile No." [ngClass]="{'is-disable':isDisable}" formControlName="Mobile"> 
+          </div>
+          <div class="buttons">
+            <button [ngClass]="{'is-disable':isDisable}">{{actionButton}}</button>
+            <button type="reset" [ngClass]="{'is-disable':isDisable}">Cancel</button>
+          </div>
+          <p class="link" (click)="loginPage()">Login Here</p>
+          <p class="error">{{message}}</p>
+        </form>
+    </div>
+    <div class="alert" *ngIf="alertMessage">
+      <i class="fa-solid {{alertIcon}}"></i>
+      <p>{{alertValue}}</p>
+    </div>
+</div>

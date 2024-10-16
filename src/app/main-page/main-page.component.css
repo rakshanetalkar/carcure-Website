@@ -1,0 +1,26 @@
+#navBar{
+    box-shadow: 0px 0px 8px gray;
+}
+.container-fluid h2{
+    margin-left: 3%;
+}
+#navContent{
+    margin-left: 70%;
+}
+#link
+{
+    color: white;
+    font-size: 23px;
+    transition: all ease-in-out 0.4s;
+    margin-left: 25px;
+}
+#link:hover
+{
+    color: red;
+    font-size: 21px;
+    border-radius: 10px;
+}
+.active{
+    border-bottom: 3px solid red;
+    border-radius: 2px;
+}

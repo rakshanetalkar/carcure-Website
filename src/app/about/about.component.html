@@ -1,0 +1,16 @@
+<section class="about-container" id="about">
+    <div class="about-img">
+        <img src="./assets/about.png">
+    </div>
+    <div class="about-text">
+        <h1>About Us</h1>
+        <h3>Cheap Prices With Quality Cars and Service</h3>
+        <div class="card" *ngFor="let card of cards">
+            <img src="{{card.imgUrl}}">
+            <p>{{card.info}}</p>
+        </div>
+        <button>Learn More</button>
+    </div>
+</section>
+<app-footer></app-footer>
+<app-login-footer></app-login-footer>

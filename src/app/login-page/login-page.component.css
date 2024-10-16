@@ -1,0 +1,90 @@
+.loginPanel{
+    width: 100%;
+    height: 670px;
+    display: flex;
+    align-items: center;
+    background: url(Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.loginPanel .login{
+    width: 370px;
+    height: 370px;
+    margin: 5% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px black;
+    background: rgb(255, 237, 237);
+}
+.loginPanel .login h2{
+    padding: 4%;
+    margin-top: 2%;
+    font-weight: bold;
+    color: crimson;
+}
+.loginPanel .login form .inputPanel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    height: 130px;    
+    background: transparent;
+}
+.loginPanel .login form .inputPanel input{
+    width: 100%;
+    height: 50px;
+    padding: 0px 10px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    transition: all ease-in-out 0.4s;
+    color: crimson;
+    font-size: 20px;
+}
+.loginPanel .login form .inputPanel input:hover{
+    border: 2px solid crimson;
+}
+form .btnForgot{
+    width: 100%;
+    display: grid;
+    place-content: end;
+    margin-bottom: 5px;
+}
+form .btnForgot a,form .btnRegister a{
+    text-decoration: none;
+    font-size: 19px;
+    color: crimson;
+}
+.loginPanel .login button{
+    width: 100%;
+    padding: 7px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    font-size: 25px;
+    background: crimson;
+    color: white;
+    transition: all ease-in-out 0.4s;
+}
+.loginPanel .login button:hover{
+    background: white;
+    color: crimson;
+    box-shadow: 0px 0px 8px crimson;
+}
+form .btnRegister{
+    width: 100%;
+    display: grid;
+    place-content: center;
+    margin-top: 10px;
+}
+.error{
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}
